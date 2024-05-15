@@ -2,7 +2,7 @@ import { IUser, TypeUserForm } from '@/types/auth.types'
 
 import { axiosWithAuth } from '@/api/interceptors'
 
-export interface IProfilePesponse {
+export interface IProfileResponse {
 	user: IUser
 	statistics: {
 		label: string
@@ -14,7 +14,7 @@ class UserService {
 	private BASE_URL = '/user/profile'
 
 	async getProfile() {
-		const response = await axiosWithAuth.get<IProfilePesponse>(this.BASE_URL)
+		const response = await axiosWithAuth.get<IProfileResponse>(this.BASE_URL)
 		return response.data
 	}
 
@@ -24,4 +24,4 @@ class UserService {
 	}
 }
 
-export const uerService = new UserService()
+export const userService = new UserService()
