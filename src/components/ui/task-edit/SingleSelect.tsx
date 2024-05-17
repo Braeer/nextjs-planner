@@ -51,7 +51,7 @@ export function SingleSelect({
 					<Badge>Click for select</Badge>
 				)}
 			</button>
-			{value && (
+			{value && value != 'lightslategray' && (
 				<button
 					className='absolute top-0 right-0 opacity-30 hover:opacity-100 transition-opacity'
 					onClick={e => {
