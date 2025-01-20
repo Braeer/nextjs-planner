@@ -8,7 +8,7 @@ import { TransparentField } from '@/components/ui/fields/TransparentField'
 import { SingleSelect } from '@/components/ui/task-edit/SingleSelect'
 import { DatePicker } from '@/components/ui/task-edit/date-picker/DatePicker'
 
-import type { ITaskResponse, TypeTaskFormState } from '@/types/task.types'
+import type { ITaskResponse, TypeTaskFromState } from '@/types/task.types'
 
 import { useDeleteTask } from '../hooks/useDeleteTask'
 import { useTaskDebounce } from '../hooks/useTaskDebounce'
@@ -21,7 +21,7 @@ interface IKanbanCard {
 }
 
 export function KanbanCard({ item, setItems }: IKanbanCard) {
-	const { register, control, watch } = useForm<TypeTaskFormState>({
+	const { register, control, watch } = useForm<TypeTaskFromState>({
 		defaultValues: {
 			name: item.name,
 			isCompleted: item.isCompleted,

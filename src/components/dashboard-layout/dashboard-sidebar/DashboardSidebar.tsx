@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { COLORS } from '@/constants/color.constants'
 
 import { LogoutButton } from './LogoutButton'
-import { MenuItem } from './Menuitem'
+import { MenuItem } from './MenuItem'
 import { MENU } from './menu.data'
 
 export function DashboardSidebar() {
